@@ -5,9 +5,10 @@ const Pagination = (props) => {
     const { page, totalPages, handlePaginationClick } = props
     return (
         <div className=".Pagination">
+            <div className="inPagination">
             <button
             className="Pagination-button"
-            onClick={()=>{handlePaginationClick('rev')}}
+            onClick={()=>{handlePaginationClick('prev')}}
             disabled={page <= 1 }
             >
             &larr;
@@ -19,12 +20,12 @@ const Pagination = (props) => {
 
             <button
              className="Pagination-button"
-             onClick = {() => {handlePaginationClick('next')}}
+             onClick = {() => handlePaginationClick('next')}
              disabled = {page>=totalPages}
             >
             &rarr;
             </button>
-
+            </div>
         </div>
     )
 }

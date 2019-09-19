@@ -1,8 +1,11 @@
 .Pagination {
     margin: 50px auto;
-    text-align: center;
+    text-align: center
   }
-  
+  .inPagination{
+    width: 32%;
+    margin: 0 auto
+  }
   .Pagination-button {
     text-align: center;
     border: none;
