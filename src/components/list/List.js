@@ -1,6 +1,6 @@
 import React from 'react'
 import { API_URL } from '../../config';
-import { helper } from '../helpers';
+import { helper } from '../../helpers';
 import Loading from '../common/Loading';
 import Table from './Table';
 import Pagination from './Pagination';
@@ -47,16 +47,6 @@ class List extends React.Component {
             })
     }
 
-    percentChange(percent) {
-        if (percent > 0) {
-            return <span className="percent-raised">{percent}% &uarr; </span>
-        } else if (percent < 0) {
-            return <span className="percent-fallen">{percent}% &darr; </span>
-        } else {
-            return <span>{percent}</span>
-        }
-    }
-
     handlePaginationClick(direction) {
         let nextPage = this.state.page
         nextPage = direction === 'next' ? nextPage + 1 : nextPage - 1;
@@ -74,6 +64,7 @@ class List extends React.Component {
         if (error) {
             return <div className="error">{error}</div>
         }
+        
         return (
             <div>
                 <Table
@@ -87,7 +78,6 @@ class List extends React.Component {
                 />
             </div>
         )
-
     }
 }
 
