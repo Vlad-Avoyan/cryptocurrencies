@@ -64,7 +64,6 @@ class List extends React.Component {
         if (error) {
             return <div className="error">{error}</div>
         }
-        
         return (
             <div>
                 <Table
